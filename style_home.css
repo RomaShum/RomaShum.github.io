@@ -1,0 +1,70 @@
+.home {
+	width: 100vw;
+	height: auto;
+	position: relative;
+}
+.im {
+	max-width: 730px;
+	margin: 15vh auto 25vh;
+}
+.i {
+	font-size: 50px;
+	color: white;
+}
+.m1 {
+	font-size: 70px;
+	color: #f06;
+
+}
+.m2 {
+	font-size: 60px;
+	color: #0f9;
+
+}
+.logo_box {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	margin: 4%;
+}
+.logo_box div img {
+	width: 50px;
+}
+.logo {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	transition-duration: 0.5s
+}
+.logo_shadow_1 {
+	position: absolute;
+	z-index: -1;
+	transition-duration: 0.5s;
+	left: 0;
+	top: 0;
+}
+.logo_shadow_2 {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: -1;
+	transition-duration: 0.5s;
+}
+.logo_white {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: -1;
+}
+.logo_box:hover .logo_shadow_2, .logo_box:hover .logo_shadow_1{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	transition-duration: 0.25s;
+}
+.logo_box:hover .logo{
+	opacity: 0;
+	transition-duration: 0.25s;
+}

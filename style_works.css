@@ -1,0 +1,104 @@
+.works {
+	width: 100vw;
+	height: auto;
+
+}
+.project_gallery {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-content: flex-start;
+}
+.project {
+	background-color: white;
+	width: 250px;
+	height: 250px;
+	min-width: 250px;
+	min-height: 250px;
+	margin: 40px;
+	position: relative;
+	overflow: hidden;
+}
+.image {
+	width: 100%;
+	position: absolute;
+}
+.blackout {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	position: relative;
+	z-index: 1;
+	color: rgba(0,0,0,0);
+	padding: 20px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	transition-property: color;
+	transition-duration: 0.25s;
+}
+.blackout:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+.blackout:hover:before, .blackout:focus:before, .blackout:active:before {
+	transform: scale(1);
+}
+.zoom {
+	width: 60px;
+	height: 60px;
+	margin: 40px auto;
+}
+.zoom img {
+	width: 100%;
+	opacity: 0;
+}
+.project_name {
+	padding-top: 20px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	font-weight: 600;
+}
+.project_type {
+	font-size: 16px;
+	font-weight: 400;
+}
+.project:hover {
+	box-shadow: 15px 15px #000,
+	90px 90px 0 -70px #0f9,
+	-15px -15px #000,
+	-90px -90px 0 -70px #f06;
+	transition-duration: 0.25s;
+	transition-delay: 0.25s;
+	transition-timing-function: linear;
+}
+.blackout:hover p {
+	transition-duration: 0.5s;
+	transition-delay: 0.5s;
+	color: rgba(150,150,150,1);
+	transition-timing-function: linear;
+}
+.blackout:hover .project_name {
+	color: white;
+}
+.project:hover .zoom img {
+	opacity: 1;
+	transition-duration: 0.5s;
+	transition-delay: 0.5s;
+	cursor: pointer;
+	transition-timing-function: linear;
+}
